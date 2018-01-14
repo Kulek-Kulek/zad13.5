@@ -12,11 +12,12 @@ server.on('request', function (request, response) {
     });
 
 
+  
     } else {
     		response.statusCode = 404;
             response.write('<h1>404: Zła ścieżka!</h1>');
-    		fs.readFile('./images/cat.jpg', function(err, img) {
-        	response.write(img, "jpg");
+    		fs.readFile('index1.html', function(err, html) {
+        	response.write(html);
         	response.end();
     		});     
     }
